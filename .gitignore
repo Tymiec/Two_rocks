@@ -11,7 +11,7 @@
 /[Uu]ser[Ss]ettings/
 /Assets/Imported
 /Assets/FreeImports
-
+/Assets/Audio
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
