@@ -76,7 +76,8 @@ public class FitToWaterSurface : MonoBehaviour
             }
             else
             {
-                Debug.LogError("Can't Find Projected Positions for All Edges");
+                // Debug.LogError("Can't Find Projected Positions for All Edges");
+                Debug.Log("Can't Find Projected Positions for All Edges");
             }
         }
     }
