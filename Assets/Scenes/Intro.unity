@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 717.39484, g: 642.28235, b: 544.23114, a: 1}
+  m_IndirectSpecularColor: {r: 716.73773, g: 641.7746, b: 543.9161, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1008,7 +1008,7 @@ MonoBehaviour:
   boatWidth: 4
   rotationScale: 2.5
   rotationSmoothing: 0.1
-  selfRightingStrength: 2.5
+  selfRightingStrength: 2
 --- !u!65 &1154000696
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -22,7 +22,6 @@ public class FitToWaterSurface : MonoBehaviour
         initialRotation = transform.rotation;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (targetSurface != null)
@@ -67,16 +66,17 @@ public class FitToWaterSurface : MonoBehaviour
                 float averageHeight = (frontLeftHeight + frontRightHeight + backLeftHeight + backRightHeight) / 4;
                 Vector3 newPosition = new Vector3(transform.position.x, averageHeight, transform.position.z);
 
-                Quaternion targetRotation = Quaternion.Euler(pitch, initialRotation.eulerAngles.y, roll);
+                // Calculate target rotation without affecting the Y axis
+                Quaternion targetRotation = Quaternion.Euler(pitch, transform.rotation.eulerAngles.y, roll);
+
+                // Apply smoothing
                 Quaternion smoothedRotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSmoothing * Time.deltaTime);
-                Quaternion selfRightingRotation = Quaternion.Slerp(smoothedRotation, initialRotation, selfRightingStrength * Time.deltaTime);
 
                 transform.position = newPosition;
-                transform.rotation = selfRightingRotation;
+                transform.rotation = smoothedRotation; // Apply the new rotation
             }
             else
             {
-                // Debug.LogError("Can't Find Projected Positions for All Edges");
                 Debug.Log("Can't Find Projected Positions for All Edges");
             }
         }
