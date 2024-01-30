@@ -12,7 +12,7 @@ public class CameraChange : MonoBehaviour
     [SerializeField] private GameObject modelToBeDestroyed;
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Turning off intro camera");
+        // Debug.Log("Turning off intro camera");
         activeCamera.SetActive(false);
         targetCamera.SetActive(true);
         if (modelToBeDestroyed)

@@ -16,6 +16,8 @@ public class FitToWaterSurface : MonoBehaviour
     private WaterSearchParameters searchParameters = new WaterSearchParameters();
     private WaterSearchResult searchResult = new WaterSearchResult();
 
+    private int mitigateErrors = 0;
+
     void Start()
     {
         // Store the initial rotation of the boat
@@ -77,7 +79,12 @@ public class FitToWaterSurface : MonoBehaviour
             }
             else
             {
-                Debug.Log("Can't Find Projected Positions for All Edges");
+                mitigateErrors++;
+                if (mitigateErrors > 2)
+                {
+                    Debug.Log("Can't Find Projected Positions for All Edges");
+                }
+                
             }
         }
     }
