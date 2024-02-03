@@ -9,6 +9,7 @@ public class WielkiPolakMystery : MonoBehaviour
     [SerializeField] private TextMeshPro middleDigit; // Added middle digit
     [SerializeField] private TextMeshPro rightDigit;
     [SerializeField] private AudioSource polskaGurom;
+    [SerializeField] private Animator doorOpenAnim;
 
     void Start()
     {
@@ -47,8 +48,10 @@ public class WielkiPolakMystery : MonoBehaviour
             // What happens when the mystery is solved
             Debug.Log("You solved the mystery!");
             //play polska gurom
+            polskaGurom.Play();
             
             //open the door
+            doorOpenAnim.SetTrigger("TriggerN");
             
         }
     }

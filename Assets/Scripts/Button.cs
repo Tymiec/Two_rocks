@@ -27,7 +27,7 @@ public class Button : GigaButton
         if (highlight)
         {
             // hoverHighlight.material.SetColor("_EmissiveColor", Color.white * 1); 555455
-            hoverHighlight.material.SetColor("_EmissiveColor", Color.white * 555455);
+            hoverHighlight.material.SetColor("_EmissiveColor", Color.white * 2554);
         }
         else
         {
