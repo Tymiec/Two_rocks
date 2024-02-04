@@ -10,6 +10,8 @@ public class WielkiPolakMystery : MonoBehaviour
     [SerializeField] private TextMeshPro rightDigit;
     [SerializeField] private AudioSource polskaGurom;
     [SerializeField] private Animator doorOpenAnim;
+    [SerializeField] private GameObject objectToDeleteAfterSolving;
+    private bool checkOnce = false;
 
     void Start()
     {
@@ -46,9 +48,14 @@ public class WielkiPolakMystery : MonoBehaviour
         if (leftDigit.text == "2" && middleDigit.text == "1" && rightDigit.text == "4") // Replace "X" with the correct condition for the middle digit
         {
             // What happens when the mystery is solved
-            Debug.Log("You solved the mystery!");
+            Debug.Log("POLSKA GUROM!");
             //play polska gurom
-            polskaGurom.Play();
+            if (!checkOnce)
+            {
+                Destroy(objectToDeleteAfterSolving);
+                polskaGurom.Play();
+                checkOnce = true;
+            }
             
             //open the door
             doorOpenAnim.SetTrigger("TriggerN");
