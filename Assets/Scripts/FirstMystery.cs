@@ -7,6 +7,9 @@ public class FirstMystery : MonoBehaviour
 {
     [SerializeField] private TextMeshPro leftDigit;
     [SerializeField] private TextMeshPro rightDigit;
+    [SerializeField] private GameObject audioToBeDeleted;
+    [SerializeField] private GameObject objectToBeDeleted;
+    [SerializeField] private AudioSource audioToBePlayedOnSolve;
     void Start()
     {
         leftDigit.text = Random.Range(1, 8).ToString();
@@ -36,6 +39,10 @@ public class FirstMystery : MonoBehaviour
         {
             //co sie ma stac jak sie otworzy
             Debug.Log("You solved the mistery");
+            Destroy(audioToBeDeleted);
+            // Destroy(objectToBeDeleted);
+            objectToBeDeleted.SetActive(false);
+            audioToBePlayedOnSolve.Play();
         }
     }
 }
