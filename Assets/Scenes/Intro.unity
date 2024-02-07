@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 711.5568, g: 637.15344, b: 539.8708, a: 1}
+  m_IndirectSpecularColor: {r: 706.7233, g: 632.5818, b: 535.6409, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15900,6 +15900,7 @@ MonoBehaviour:
   targetGameObject: {fileID: 157207112}
   audioToBeDisabled: {fileID: 2093163764}
   audioToPlay: {fileID: 452570070}
+  volumeToBeDisabled: {fileID: 563961684}
 --- !u!1 &1523258684
 GameObject:
   m_ObjectHideFlags: 0

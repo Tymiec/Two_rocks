@@ -7,6 +7,7 @@ public class LightSwitcher : MonoBehaviour
     [SerializeField] private GameObject targetGameObject;
     [SerializeField] private GameObject audioToBeDisabled;
     [SerializeField] private AudioSource audioToPlay;
+    [SerializeField] private GameObject volumeToBeDisabled;
 
     // This function is called when any GameObject enters the trigger.
     private void OnTriggerEnter(Collider other)
@@ -16,6 +17,11 @@ public class LightSwitcher : MonoBehaviour
         if (audioToBeDisabled)
         {
             audioToBeDisabled.SetActive(false);
+        }
+
+        if (volumeToBeDisabled)
+        {
+            volumeToBeDisabled.SetActive(false);
         }
 
         if (audioToPlay)
@@ -33,6 +39,11 @@ public class LightSwitcher : MonoBehaviour
         if (audioToBeDisabled)
         {
             audioToBeDisabled.SetActive(true);
+        }
+        
+        if (volumeToBeDisabled)
+        {
+            volumeToBeDisabled.SetActive(true);
         }
     }
 }
