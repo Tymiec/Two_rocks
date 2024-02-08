@@ -15,10 +15,9 @@ public class WielkiPolakMystery : MonoBehaviour
 
     void Start()
     {
-        // Initialize all digits with random values within specified ranges
-        leftDigit.text = Random.Range(1, 10).ToString(); // Adjusted range to include 9 as a possible starting value
+        leftDigit.text = Random.Range(3, 10).ToString(); // Fixed risk of auto solve
         middleDigit.text = Random.Range(0, 10).ToString(); // Assuming the middle digit can start at 0
-        rightDigit.text = Random.Range(1, 10).ToString();
+        rightDigit.text = Random.Range(0, 10).ToString();
     }
 
     public void ChangeNumber(int whichDigit, int amount)
